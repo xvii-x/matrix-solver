@@ -42,8 +42,12 @@ public class MatrixSolver {
         }
     }
 
+    public static boolean canBeMultiplied(int[][] first, int[][] second) {
+        return first[0].length == second.length;
+    }
+
     public static int[][] multiplyMatrices(int[][] first, int[][] second) {
-        if (first == null || second == null || first.length == 0 || second.length == 0) {
+        if (!canBeMultiplied(first, second) || first.length == 0 || second.length == 0) {
             System.err.println("Wrong matrix provided!");
             return new int[0][0];
         }
