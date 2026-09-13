@@ -11,6 +11,6 @@ class Main {
                 {5, 6}
         };
 
-        System.out.println(Arrays.deepToString(MatrixSolver.multiplyMatrices(simpleMatrix, secondMatrix)));
+        MatrixSolver.printMatrix(MatrixSolver.multiplyMatrices(simpleMatrix, secondMatrix));
     }
 }
