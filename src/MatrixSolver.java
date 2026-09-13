@@ -1,9 +1,22 @@
 public class MatrixSolver {
-    public int getMatrixOrder(int[][] matrix) {
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            System.out.print("( ");
+            for (int number : row)
+                System.out.printf("%d ", number);
+            System.out.print(")");
+            System.out.println();
+        }
+    }
+    public static int getMatrixOrder(int[][] matrix) {
         return matrix.length;
     }
 
-    public int solveSecondOrder(int[][] matrix) {
+    public static int getMatrixDeterminant(int[][] matrix) {
+        return 0;
+    }
+
+    public static int solveSecondOrder(int[][] matrix) {
         int plus = 1, minus = 1;
         int rowNumber = 0;
         for (int[] row : matrix) {
@@ -21,10 +34,10 @@ public class MatrixSolver {
         return plus - minus;
     }
 
-    public void multiplyOn(int[][] matrix, int k) {
+    public static void multiplyOnConstant(int[][] matrix, int constant) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] *= k;
+                matrix[i][j] *= constant;
             }
         }
     }
